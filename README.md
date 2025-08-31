@@ -161,7 +161,7 @@ Valor total da reserva: R$ 1.080,00
 
 ### 🔧 Pré-requisitos
 
-* [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download) ou superior
+* [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download) ou superior
 * Um editor de código como [Visual Studio Code](https://code.visualstudio.com/) ou [Visual Studio](https://visualstudio.microsoft.com/)
 
 ### ▶️ Passo a passo
@@ -169,7 +169,7 @@ Valor total da reserva: R$ 1.080,00
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/projeto-hospedagem-hotel.git
+   git clone https://github.com/vandersant7/DesafioProjetoHospedagem.git
    ```
 2. Acesse a pasta do projeto:
 
@@ -196,7 +196,7 @@ Valor total da reserva: R$ 1.080,00
 
 ## 🚀 Tecnologias utilizadas
 
-* C# 13
+* C# 12
 * .NET 8
 * Programação Orientada a Objetos (POO)
 
