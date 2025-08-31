@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ProjetoHospedagem.Models;
+﻿namespace ProjetoHospedagem.Models;
 
 internal class Reserva
 {
@@ -24,20 +18,22 @@ internal class Reserva
 
     public void CadastrarHospedes(List<Pessoa> hospedes)
     {
+        if (Suite == null)
+        {
+            throw new Exception("É necessário cadastrar uma suíte antes de cadastrar hóspedes.");
+        }
 
-        if (hospedes.Count <= ObterQuantidadeSuite())
+        if (hospedes.Count <= Suite.Capacidade)
         {
             Hospedes = hospedes;
         }
         else
         {
-            Console.WriteLine(
-            $"Quantidade de {hospedes.Count} hóspede(s) excedeu a capacidade " +
-            $"permitida de {ObterQuantidadeSuite()}"
-        );
+            throw new Exception("A quantidade de hóspedes excede a capacidade da suíte.");
         }
 
-       }
+
+    }
 
     public void CadastrarSuite(Suite suite)
     {
@@ -60,7 +56,7 @@ internal class Reserva
     }
     public int ObterQuantidadeHospedes()
     {
-        return Hospedes.Count;    
+        return Hospedes.Count;
     }
     public int ObterQuantidadeSuite()
     {
